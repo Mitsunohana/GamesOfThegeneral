@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="300" height="200" version="1.1" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <rect width="300" height="200"/>
+ <path transform="translate(0 -922.52)" d="m-26.066 1108.6 212.13-212.13" fill="none" stroke="#fff" stroke-width="40"/>
+ <text transform="rotate(-45 -1113.6 -461.26)" x="-657.11157" y="777.83148" fill="#000000" font-family="sans-serif" font-size="32px" letter-spacing="0px" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="-657.11157" y="777.83148">GENERAL</tspan></text>
+ <g transform="translate(0 -922.52)">
+  <path d="m190 972.99h15.279l4.7214-14.531 4.7214 14.531h15.279l-12.361 8.9805 4.7213 14.531-12.361-8.9805-12.361 8.9805 4.7214-14.531z" stroke="#fff" stroke-width=".75"/>
+  <g fill="#fff">
+   <path d="m210.73 979.72-20.73-6.7354h15.279z"/>
+   <path d="m210 980.25-3e-5 -21.796 4.7214 14.531z"/>
+   <path d="m209.27 979.72 20.73-6.7355-12.361 8.9806z"/>
+   <path d="m209.55 978.87 12.812 17.634-12.361-8.9806z"/>
+   <path d="m210.45 978.87-12.812 17.634 4.7214-14.531z"/>
+  </g>
+  <path d="m240.44 1009.6h15.279l4.7214-14.531 4.7214 14.531h15.279l-12.361 8.9805 4.7213 14.531-12.361-8.9805-12.361 8.9805 4.7214-14.531z" stroke="#fff" stroke-width=".75"/>
+  <g fill="#fff">
+   <path d="m261.17 1016.4-20.73-6.7354h15.279z"/>
+   <path d="m260.44 1016.9-3e-5 -21.796 4.7214 14.531z"/>
+   <path d="m259.71 1016.4 20.73-6.7355-12.361 8.9806z"/>
+   <path d="m259.99 1015.5 12.812 17.634-12.361-8.9806z"/>
+   <path d="m260.89 1015.5-12.812 17.634 4.7214-14.531z"/>
+  </g>
+  <path d="m221.17 1068.9h15.279l4.7214-14.531 4.7214 14.531h15.279l-12.361 8.9805 4.7213 14.531-12.361-8.9805-12.361 8.9805 4.7214-14.531z" stroke="#fff" stroke-width=".75"/>
+  <g fill="#fff">
+   <path d="m241.9 1075.7-20.73-6.7354h15.279z"/>
+   <path d="m241.17 1076.2-3e-5 -21.796 4.7214 14.531z"/>
+   <path d="m240.44 1075.7 20.73-6.7355-12.361 8.9806z"/>
+   <path d="m240.72 1074.8 12.812 17.634-12.361-8.9806z"/>
+   <path d="m241.62 1074.8-12.812 17.634 4.7214-14.531z"/>
+  </g>
+  <path d="m158.83 1068.9h15.279l4.7214-14.531 4.7214 14.531h15.279l-12.361 8.9805 4.7213 14.531-12.361-8.9805-12.361 8.9805 4.7214-14.531z" stroke="#fff" stroke-width=".75"/>
+  <g fill="#fff">
+   <path d="m179.56 1075.7-20.73-6.7354h15.279z"/>
+   <path d="m178.83 1076.2-3e-5 -21.796 4.7214 14.531z"/>
+   <path d="m178.1 1075.7 20.73-6.7355-12.361 8.9806z"/>
+   <path d="m178.38 1074.8 12.812 17.634-12.361-8.9806z"/>
+   <path d="m179.28 1074.8-12.812 17.634 4.7214-14.531z"/>
+  </g>
+  <path d="m139.56 1009.6h15.279l4.7214-14.531 4.7214 14.531h15.279l-12.361 8.9805 4.7213 14.531-12.361-8.9805-12.361 8.9805 4.7214-14.531z" stroke="#fff" stroke-width=".75"/>
+  <g fill="#fff">
+   <path d="m160.29 1016.4-20.73-6.7354h15.279z"/>
+   <path d="m159.56 1016.9-3e-5 -21.796 4.7214 14.531z"/>
+   <path d="m158.83 1016.4 20.73-6.7355-12.361 8.9806z"/>
+   <path d="m159.11 1015.5 12.812 17.634-12.361-8.9806z"/>
+   <path d="m160.01 1015.5-12.812 17.634 4.7214-14.531z"/>
+  </g>
+ </g>
+</svg>
