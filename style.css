@@ -32,8 +32,9 @@ h1 {
     width: 540px;
     height: 480px;
     background-color: rgb(249, 133, 32);
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .square {
@@ -49,12 +50,12 @@ img {
     width: 50px;
     position: relative;
     z-index: -9;
-    top: 5px;
-    left: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
 }
 
 
-.piece svg {
+svg {
     height: 40px;
     width: 50px;
     position: relative;
@@ -70,7 +71,7 @@ path {
     z-index: 9;
     height: 60px;
     width: 60px;
-    
+    border: 1px solid yellow;
 }
 
 .pureblack, .purewhite {
