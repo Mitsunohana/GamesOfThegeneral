@@ -45,6 +45,6 @@ const black5star ='<div class="piece black" rank="fivestar"><img src="./pieces/b
 const white5star ='<div class="piece white" rank="fivestar"><img src="./pieces/white5star.svg" draggable="false"></img></div>'
 
 
-const pureblack = '<div><svg xmlns="http://www.w3.org/2000/svg" width="300" height="50"><rect width="100%" height="100%" fill="#000000" /></svg></div>'
-const purewhite = '<div><svg xmlns="http://www.w3.org/2000/svg" width="300" height="50"><rect width="100%" height="100%" fill="#fff" /></svg></div>'
+const pureblack = '<div class="black"><svg xmlns="http://www.w3.org/2000/svg" width="300" height="50"><rect width="100%" height="100%" fill="#000000" /></svg></div>'
+const purewhite = '<div class="white"><svg xmlns="http://www.w3.org/2000/svg" width="300" height="50"><rect width="100%" height="100%" fill="#fff" /></svg></div>'
 
