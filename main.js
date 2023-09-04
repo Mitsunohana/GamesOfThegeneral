@@ -26,7 +26,6 @@ function createBoard() {
         const square = document.createElement('div')
         square.classList.add('square')
         square.innerHTML = piece
-        console.log(square.firstChild)
         square.firstChild?.setAttribute('draggable', true)
         square.setAttribute('square-id',i)
         board.append(square)
@@ -65,19 +64,12 @@ function checkMode(){
 
 function makeBackCover(arrPieces) {
     arrPieces.forEach(piece => {
+        piece.setAttribute('draggable', false)
         const blackback = document.createElement('div')
         blackback.classList.add('pureblack')
         blackback.innerHTML = pureblack
         piece.parentNode.append(blackback)
     })
-
-
-    //     const square = document.createElement('div')
-    //     square.classList.add('square')
-    //     square.innerHTML = piece
-    //     square.firstChild?.setAttribute('draggable', true)
-    //     square.setAttribute('square-id',i)
-    //     board.append(square)
 }
 
 
@@ -109,10 +101,17 @@ function finishedPrep() {
     }else if(player=="startWhite"){
         player="white"
         mode ="Game Phase"
+
+
+        const blackPieces = document.querySelectorAll('.black')
+
+        blackPieces.forEach(piece => {
+            piece.setAttribute('draggable', false)
+        })
+
+
         startGame()
     }
-
-
 }
 
 
@@ -274,12 +273,12 @@ function challenge(attacker, defender, e) {
         if(attacker=="flag"){
             e.target.parentNode.parentNode.append(draggedElement)
             e.target.parentNode.parentNode.firstChild.remove()
-            e.target.remove()
+            e.target.parentNode.remove()
             declareWinner("White","Black")    
         }else{
             
             e.target.parentNode.parentNode.firstChild.remove()
-            e.target.remove()
+            e.target.parentNode.remove()
             draggedElement.remove()
         }
     }
@@ -287,7 +286,7 @@ function challenge(attacker, defender, e) {
     if(attacker=="spy" && defender!="private"){
         e.target.parentNode.parentNode.append(draggedElement)
         e.target.parentNode.parentNode.firstChild.remove()
-        e.target.remove()
+        e.target.parentNode.remove()
     }else if(attacker=="spy" && defender=="private"){
         draggedElement.remove()
     }else if(attacker=="flag" && defender!="flag"){
@@ -296,7 +295,8 @@ function challenge(attacker, defender, e) {
     }else if(rankValue[attacker]>rankValue[defender]){
         e.target.parentNode.parentNode.append(draggedElement)
         e.target.parentNode.parentNode.firstChild.remove()
-        e.target.remove()
+        e.target.parentNode.remove()
+
 
         if(defender=="flag"){
             declareWinner("White","Black")
@@ -313,6 +313,8 @@ function coverWhite() {
     const whitePieces = document.querySelectorAll('.white')
     
     whitePieces.forEach(piece => {
+
+        piece.setAttribute('draggable', false)
         const whiteback = document.createElement('div')
         whiteback.classList.add('purewhite')
         whiteback.innerHTML = purewhite
@@ -327,8 +329,9 @@ function coverWhite() {
 function coverBlack() {
 
     const blackPieces = document.querySelectorAll('.black')
-    
+
     makeBackCover(blackPieces)
+
     
     player = "white"
     playerTurn.textContent = player
@@ -337,13 +340,25 @@ function coverBlack() {
 
 
 function revealPieces() {
+
+    const blackPieces = document.querySelectorAll('.black')
+    const whitePieces = document.querySelectorAll('.white')
+
+
+        
     
     if(player=="white"){
         const whitebacks = document.querySelectorAll('.purewhite')
         removeBacks(whitebacks)
+        whitePieces.forEach(piece => {
+            piece.setAttribute('draggable', true)
+        })
     }else if(player=="black"){
         const blackbacks = document.querySelectorAll('.pureblack')
         removeBacks(blackbacks)
+        blackPieces.forEach(piece => {
+            piece.setAttribute('draggable', true)
+        })
         
     }  
 }
