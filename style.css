@@ -13,7 +13,7 @@ body {
 }
 
 h1 {
-    height: 15vh;
+    height: 100px;
     width: 100vw;
     font-size: 48px;
     text-align: center;
@@ -21,7 +21,6 @@ h1 {
 }
 
 #mainContainer {
-    height: 85vh;
     width: 100vw;
     display: flex;
     justify-content: space-evenly;
@@ -71,7 +70,6 @@ path {
     z-index: 9;
     height: 60px;
     width: 60px;
-    border: 1px solid yellow;
 }
 
 .pureblack, .purewhite {
