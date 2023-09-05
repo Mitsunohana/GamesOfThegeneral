@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="GOTG">GAMES OF THE GENERAL</h1>
+    <div id="howtoplay">
+        <nav>
+            <a href="#objectives">Objective</a>
+            <a href="#equipments">Equipments</a>
+            <a href="#gameplay">Gameplay</a>
+        </nav>
+        <div id="objectives">
+            
+            <h2>Objectives</h2>
+            <p>
+                The game's objective is to eliminate or capture the opponent's Flag or to maneuver one's Flag to the far edge of the board (the opposing back rank), subject to the following conditions.
+            </p>
+            <p>
+                The Flag, if challenged, is eliminated by any opposing piece, including the opposing and challenging Flag. </p>
+            <p>
+                If a player's Flag is eliminated by a challenge, that player loses the game.   </p>
+            <p>
+                The Flag that challenges the opponent's Flag wins the challenge and thus wins the game.
+            </p>
+            <p>
+                When the Flag successfully reaches the opponent's back rank, it has to survive one more turn without being challenged before it can declare a victory.
+            </p>
+            <p>
+                If a Flag reaches the opposing back rank and there is no adjacent opposing piece that can challenge it, the Flag wins the game immediately.
+            </p>
+            <p>
+                If a Flag reaches the opposing back rank directly adjacent to an opposing piece, and that piece does not challenge the Flag immediately on the opponent's subsequent turn, then that Flag wins the game. 
+            </p>
+            <p>
+                Any player may reveal their Flag at any time and for any reason, although most often a player reveals their Flag after it has already secured victory at the opposing back rank.
+            </p>
+            <p>
+                Most games end in a victory for one of the players. One player may have lost so many pieces or their pieces are impractically positioned on the board that they feel they can no longer win the game.
+            </p>
+            <p>
+                However, any player may propose a draw at any time; the opponent can either decline, so play continues, or agree, and thus the game ends in a tie.
+            </p>
+            <p>
+                At the end of a match, whether as a draw or as a victory for one player, it is courteous but not required to allow the opposing player a view of the surviving pieces before they are taken off the board and of the eliminated pieces.
+            </p>
+        </div>
+        <div id="equipments">
+            <h2>Equipments</h2>
+            <h3>Pieces</h3>
+            <p>
+                The player's set of pieces represents 21 soldiers (combatants) with a hierarchy of ranks and functions.
+            </p>
+            <p>
+                A higher-ranking piece (usually the officers) will eliminate any lower-ranking piece, with the exception of the 2 Spies; the Spies eliminate all pieces except the 6 Privates.           
+            </p>
+            <p>
+                Apart from the Flag (the Philippine Flag) and the Spy (a pair of prying eyes), the rank insignia of the pieces used in the game are those used in the Philippine Army.
+            </p>
+            <div id="tablediv">
+                <table border="1">
+                    <tr>
+                        <th>Pieces</th>
+                        <th>No. of Pieces</th>
+                        <th>Function</th>
+                    </tr>
+                    <tr>
+                        <td class="tablefirstcolumn">
+                            <div class="tableimg">
+                                General of the army (5 Star)
+                                <img src="./pieces/white5star.svg"></img>
+                                <img src="./pieces/black5star.svg"></img>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>Eliminates any lower-ranking officer, the Private, and the Flag.</td>
+                    </tr>
+                    <tr>
+                        <td class="tablefirstcolumn">
+                            <div class="tableimg">
+                                General (4 stars)
+                                <img src="./pieces/white4star.svg"></img>
+                                <img src="./pieces/black4star.svg"></img>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>Eliminates any lower-ranking officer, the Private, and the Flag.</td>
+                    </tr>
+                    <tr>
+                        <td class="tablefirstcolumn">
+                            <div class="tableimg">
+                                Lieutenant General (3 Star) 
+                                <img src="./pieces/white3star.svg"></img>
+                                <img src="./pieces/black3star.svg"></img>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>Eliminates any lower-ranking officer, the Private, and the Flag.</td>
+                    </tr>
+                    <tr>
+                        <td class="tablefirstcolumn">
+                            <div class="tableimg">
+                                Major General (2 stars)
+                                <img src="./pieces/white2star.svg"></img>
+                                <img src="./pieces/black2star.svg"></img>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>Eliminates any lower-ranking officer, the Private, and the Flag.</td>
+                    </tr>
+                    <tr>
+                        <td class="tablefirstcolumn">
+                            <div class="tableimg">
+                                Brigadier General (1 stars)
+                                <img src="./pieces/white1star.svg"></img>
+                                <img src="./pieces/black1star.svg"></img>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>Eliminates any lower-ranking officer, the Private, and the Flag.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="tablefirstcolumn">
+                            <div class="tableimg">
+                                Colonel (3 Magdalo 7-Ray Suns) 
+                                <img src="./pieces/whitecolonel.svg"></img>
+                                <img src="./pieces/blackcolonel.svg"></img>
+                            </div>
+
+                        </td>
+                        <td>1</td>
+                        <td>Eliminates any lower-ranking officer, the Private, and the Flag.</td>
+                    </tr>
+                    <tr>
+                        <td class="tablefirstcolumn">
+                            <div class="tableimg">
+                                Lieutenant Colonel (2 Magdalo 7-Ray Suns) 
+                                <img src="./pieces/whiteltcolonel.svg"></img>
+                                <img src="./pieces/blackltcolonel.svg"></img>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>Eliminates any lower-ranking officer, the Private, and the Flag.</td>
+                    </tr>
+                    <tr>
+                        <td class="tablefirstcolumn">
+                            <div class="tableimg">
+                                Major (1 Magdalo 7-Ray Suns) 
+                                <img src="./pieces/whitemajor.svg"></img>
+                                <img src="./pieces/blackmajor.svg"></img>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>Eliminates any lower-ranking officer, the Private, and the Flag.</td>
+                    </tr>
+                    <tr>
+                        <td class="tablefirstcolumn">
+                            <div class="tableimg">
+                                Captain (3 Magdalo Triangle) 
+                                <img src="./pieces/whitecaptain.svg"></img>
+                                <img src="./pieces/blackcaptain.svg"></img>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>Eliminates any lower-ranking officer, the Private, and the Flag.</td>
+                    </tr>
+                    <tr>
+                        <td class="tablefirstcolumn">
+                            <div class="tableimg">
+                                1st Lieutenant (2 Magdalo Triangle) 
+                                <img src="./pieces/white1stlieut.svg"></img>
+                                <img src="./pieces/black1stlieut.svg"></img>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>Eliminates any lower-ranking officer, the Private, and the Flag.</td>
+                    </tr>
+                    <tr>
+                        <td class="tablefirstcolumn">
+                            <div class="tableimg">
+                                2nd Lieutenant (1 Magdalo Triangle) 
+                                <img src="./pieces/white2ndlieut.svg"></img>
+                                <img src="./pieces/black2ndlieut.svg"></img>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>Eliminates the Sergeant, the Private, and the Flag.</td>
+                    </tr>
+                    <tr>
+                        <td class="tablefirstcolumn">
+                            <div class="tableimg">
+                                Sergeant (3 Chevrons) 
+                                <img src="./pieces/whitesergeant.svg"></img>
+                                <img src="./pieces/blacksergeant.svg"></img>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>Eliminates the Private, and the Flag.</td>
+                    </tr>
+                    <tr>
+                        <td class="tablefirstcolumn">
+                            <div class="tableimg">
+                                Private (2 Chevrons) 
+                                <img src="./pieces/whiteprivate.svg"></img>
+                                <img src="./pieces/blackprivate.svg"></img>
+                            </div>
+                        </td>
+                        <td>6</td>
+                        <td>Eliminates the Spy, and the Flag.</td>
+                    </tr>
+                    <tr>
+                        <td class="tablefirstcolumn">
+                            <div class="tableimg">
+                                Spy (2 Prying Eyes) 
+                                <img src="./pieces/whitespy.svg"></img>
+                                <img src="./pieces/blackspy.svg"></img>
+                            </div>
+                        </td>
+                        <td>2</td>
+                        <td>Eliminates all officers from the rank of Sergeant up to 5-Star General and the Flag.</td>
+                    </tr>
+                    <tr>
+                        <td class="tablefirstcolumn">
+                            <div class="tableimg">
+                                Flag (Philippine Flag) 
+                                <img src="./pieces/whiteflag.svg"></img>
+                                <img src="./pieces/blackflag.svg"></img>
+                        </div>
+                        </td>
+                        <td>1</td>
+                        <td>Eliminates the opposing Flag as long as it takes the aggressive action against the enemy Flag.</td>
+                    </tr>
+                    
+                </table>
+            </div>
+            <h3>Board</h3>
+            <p>
+                The game is played on a rectangular board with 72 plain squares arranged in 8 ranks and 9 files. 
+            </p>
+            <p>
+                To start the game, each player's 21 pieces are placed in various locations within the nearest 3 rows to each player's home side.
+            </p>
+            <p>
+                These are the 27 closest squares, leaving 6 squares open.
+            </p>
+            
+        </div>
+        <div id="gameplay">
+            <h2>Gameplay</h2>
+            <h3>Initial Position</h3>
+            <p>
+                Unlike chess or its variants, there is no predetermined initial layout for placing the pieces, allowing each player to place the pieces in different squares to their advantage or according to his strategy. 
+            </p>
+            <p>
+                The allocation of spaces (6 vacant squares) is important for the tactical movement of the individual pieces in the first three ranks, because a piece that has friendly pieces in front, behind, and on each side is effectively immobilized until a space opens up on these adjacent squares.
+            </p>
+            <h3>Moves</h3>
+            <p>
+                Players take their turns alternately.
+            </p>
+            <p>
+                Each player can move only one piece per turn.
+            </p>
+            <p>
+                All pieces have the same move: one square forward, backward, or sideways, as long as it is not blocked by the board's edge or by another friendly piece.
+            </p>
+            <p>
+                A piece cannot move into a square already occupied by a friendly piece.
+            </p>
+            <p>
+                A piece cannot move diagonally nor two or more yards away from its original position.
+            </p>
+            <p>
+                If a piece moves adjacent to (in front of, behind, or to the side of, but not diagonally from) an opposing piece, the piece that was moved can challenge the opposing piece. 
+            </p>
+            <h3>Challenge</h3>
+            <p>
+                A player initiates a challenge by placing their piece on the adjacent square where an opposing piece is located.
+            </p>
+            <p>
+                The lower-ranked piece is removed off the board.
+            </p>
+            <p>
+                The eliminated pieces are not revealed to the opposing player.
+            </p>
+            <h3>Determining result of a Challenge</h3>
+            <p>
+                Regardless of which piece initiated the challenge, their ranks determine which piece is to be eliminated and removed from the board.
+
+            </p>
+            <p>
+                Any one of the player's pieces can capture the opposing Flag. This includes the player's own Flag.
+            </p>
+            <p>
+                Any piece, except the Spy and the Flag, eliminates the Private.
+            </p>
+            <p>
+                Officers eliminate other officers that are lower in rank (e.g. a Four-Star General eliminates a Lieutenant Colonel).
+            </p>
+            <p>
+                A Spy eliminates all officers (including the Five-Star General). Only the Private can eliminate the Spy.
+            </p>
+            <p>
+                If both pieces are of the same rank, both are removed from the board (often called a "split" by most players and arbiters).
+            </p>
+            <p>
+                If a Flag challenges the opponent's Flag, the challenging Flag prevails and wins the game.
+            </p>
+            <p>
+                If a Flag reaches the opposite edge or farthest rank of the board, the opponent has one turn left although it is not announced.
+            </p>
+            <p>
+                After the turn, the player reveals the Flag. If the Flag was not challenged, the player wins the game. If it was challenged, the player loses.
+            </p>
+            
+            <h3>Youtube video</h3>
+            <p>
+                <a href="https://www.youtube.com/watch?v=6gfDzyLIXks"> How to play Game of the Generals</a>
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>
