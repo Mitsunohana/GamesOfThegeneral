@@ -26,6 +26,7 @@ function createBoard() {
         const square = document.createElement('div')
         square.classList.add('square')
         square.innerHTML = piece
+        square.setAttribute('draggable', false)
         square.firstChild?.setAttribute('draggable', true)
         square.setAttribute('square-id',i)
         board.append(square)
@@ -64,7 +65,6 @@ function checkMode(){
 
 function makeBackCover(arrPieces) {
     arrPieces.forEach(piece => {
-        piece.setAttribute('draggable', false)
         const blackback = document.createElement('div')
         blackback.classList.add('pureblack')
         blackback.innerHTML = pureblack
@@ -125,6 +125,7 @@ allSquares.forEach(square => {
     square.addEventListener('dragstart', dragStart)
     square.addEventListener('dragover', dragOver)
     square.addEventListener('drop', dragDrop)
+
 })
 
 
@@ -132,17 +133,23 @@ var startPosition
 var draggedElement
 
 function dragStart(e) {
-    draggedElement = e.target
-    startPosition = e.target.parentNode
+
+    if(e.target.classList.contains('piece')){
+        draggedElement = e.target
+        startPosition = e.target.parentNode
+    }else{
+        draggedElement = undefined
+        startPosition = undefined
+    }
 }
 
 function dragOver(e) {
     e.preventDefault()
+
 }
 
 function dragDrop(e) {
     e.stopPropagation()
-
 
     if(mode=="Prepare Phase"){
         prep(e)
@@ -170,12 +177,12 @@ function appendToDiv(e, color,  checkFunc){
 
 function prep(e) {
 
-    if(player=="white"){
+    if(player=="white" && draggedElement!=undefined){
         appendToDiv(e, "white", e.target.getAttribute('square-id')>44)
     }
 
-    if(player=="black"){
-        appendToDiv(e, "black", e.target.getAttribute('square-id')<28)
+    if(player=="black" && draggedElement!=undefined){
+        appendToDiv(e, "black", e.target.getAttribute('square-id')<27)
     }
 
 }
@@ -353,12 +360,20 @@ function revealPieces() {
         whitePieces.forEach(piece => {
             piece.setAttribute('draggable', true)
         })
+
+        playerTurn.style.backgroundColor = "#EEE";
+       playerTurn.style.color = "#111"
     }else if(player=="black"){
         const blackbacks = document.querySelectorAll('.pureblack')
         removeBacks(blackbacks)
         blackPieces.forEach(piece => {
             piece.setAttribute('draggable', true)
         })
+
+        playerTurn.style.backgroundColor = "#111";
+        playerTurn.style.color = "#EEE";
+
+
         
     }  
 }

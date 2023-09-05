@@ -8,18 +8,16 @@
 </head>
 <body>
     <h1 id="GOTG">GAMES OF THE GENERAL</h1>
-
-        <div id="mainContainer">
-        <div id="board"></div>
-
-        <div id="buttonDiv">
-            <button id="finishedPrep" onclick="finishedPrep()">Finished Preparation</button>
-            <button id="nextTurn" onclick="revealPieces()">Next Turn </button>
-            <span id="playerTurn">White</span>
-
-        </div>
+    <div id="formDiv">
+        <form action="game.html">
+            <input type="submit" value="Play Game" />
+        </form>
+        <form action="howtoplay.html">
+            <input type="submit" value="How to Play" />
+        </form>
+        <form action="history.html">
+            <input type="submit" value="History" />
+        </form>
     </div>
-    <script src="pieces.js"></script>
-    <script src="main.js"></script>    
 </body>
 </html>

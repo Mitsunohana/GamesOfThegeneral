@@ -5,6 +5,10 @@
 }
 
 body {
+    background-image: url("./background/gotg-bg.jpg");
+    background-size: cover;
+    background-color: black;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,6 +19,7 @@ body {
 h1 {
     height: 100px;
     width: 100vw;
+    color: white;
     font-size: 48px;
     text-align: center;
     line-height: 15vh;
@@ -36,7 +41,7 @@ h1 {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-.square {
+#board .square {
     width: 60px;
     height: 60px;
     border: 1px solid black;
@@ -44,7 +49,7 @@ h1 {
     
 }
 
-img {
+#board img {
     height: 50px;
     width: 50px;
     position: relative;
@@ -54,25 +59,25 @@ img {
 }
 
 
-svg {
+#board svg {
     height: 40px;
     width: 50px;
     position: relative;
     z-index: -8;
 }
-path {
+#board path {
     position: relative;
     z-index: -10;
 }
 
-.piece {
+#board .piece {
     position: relative;
     z-index: 9;
     height: 60px;
     width: 60px;
 }
 
-.pureblack, .purewhite {
+#board .pureblack, #board .purewhite {
     position: absolute;
     z-index: 10;
     top: 5px;
@@ -86,13 +91,103 @@ path {
     align-items: center;
 }
 
-#finishedPrep, #nextTurn {
-    height: 100px;
+#buttonDiv #finishedPrep, #buttonDiv #nextTurn{
+    height: 80px;
     width: 100px;
+    background-color: rgb(249, 133, 32);
+    
+}
+
+#buttonDiv #playerTurn {
+    height: 80px;
+    width: 100px;
+    background-color: #EEE;
+    color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#formDiv {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#formDiv form {
+    height: 100px;
+    width: 200px;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+#formDiv form input {
+    width: 200px;
+    font-size: 24px;
+    background-color: rgb(249, 133, 32);
+
+}
+
+#history, #howtoplay {
+    width: 80vw;
+    font-size: 24px;
+    background-color: rgb(249,133,32);
+    padding: 20px;
+}
+
+#objectives, #equipments, #gameplay {
+    border-bottom: 5px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#howtoplay nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 5px solid black;
+}
+
+#tablediv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+#howtoplay table {
+    text-align: center;
+}
+
+#howtoplay table .tableimg {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px;
+}
+
+
+#howtoplay table td,#howtoplay table th{
+    width: 200px;
+}
+
+#howtoplay #equipments img {
+    height: 50px;
+    width: 80px;
+    margin: 10px;
+}
+
+#history p, #howtoplay p {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .invisible {
-    display: none;
+    display: none !important;
 }
 
 .zeroopacity {
