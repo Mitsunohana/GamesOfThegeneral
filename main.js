@@ -2,6 +2,7 @@ const board = document.getElementById('board')
 const playerTurn = document.querySelector('#playerTurn')
 const nextTurnButton = document.querySelector('#nextTurn')
 const finishedPrepButton = document.querySelector('#finishedPrep')
+
 var winner = "none"
 
 var mode = "Prepare Phase"
@@ -157,7 +158,24 @@ function dragDrop(e) {
 
 
     if(mode=="Game Phase"){
+        
         game(e)
+        if(lastMove!=undefined){
+            if(player=="white"){
+                if(lastMove.getAttribute("square-id")<9 && lastMove.firstChild.getAttribute('rank')=="flag"){
+                    declareWinner("white","black")
+                    console.log("a")
+                }
+            }
+            if(player=="black"){
+                if( lastMove.getAttribute("square-id")>62 && lastMove.firstChild.getAttribute('rank')=="flag"){
+                    declareWinner("white","black")
+                    console.log("b")
+
+                }
+            }
+
+        }
     }
 
 }
@@ -187,12 +205,24 @@ function prep(e) {
 
 }
 
+var lastMove
+var dama
 
 function movePiece(e, yourColor, enemyColor, targetSquare, attackerPiecePosition){
     var attackerPiece = draggedElement.getAttribute('rank')
        
         if(targetSquare-1 == attackerPiecePosition || targetSquare == attackerPiecePosition-1 || targetSquare+9 == attackerPiecePosition || targetSquare-9 == attackerPiecePosition){
             e.target.append(draggedElement)
+
+            if(attackerPiece=="flag" && yourColor=="white" && targetSquare<9){
+                lastMove=e.target
+                dama="white"
+            }else if(attackerPiece=="flag" && yourColor=="black" && targetSquare>62){
+                lastMove=e.target
+                dama="black"
+            }
+
+
             if(winner=="none"){
                 if(yourColor=="white"){
                     coverWhite()
@@ -240,15 +270,18 @@ function game(e) {
 
 
 function declareWinner(winner1, winner2){
+
+    const whitebacks = document.querySelectorAll('.purewhite')
+    const blackbacks = document.querySelectorAll('.pureblack')
+
+    removeBacks(blackbacks)
+    removeBacks(whitebacks)
+
     if(player=="white"){
-        const blackbacks = document.querySelectorAll('.pureblack')
         winner = winner1
-        removeBacks(blackbacks)
         alert(winner + " Win")
     }else if(player=="black"){
-        const whitebacks = document.querySelectorAll('.purewhite')
         winner = winner2
-        removeBacks(whitebacks)
         alert(winner + " Win")
     } 
 }
