@@ -16,6 +16,28 @@ body {
     
 }
 
+
+#h1div {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#h1form {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#h1form input{
+    height: 50px;
+    width: 80%;
+    background-color: rgb(249, 133, 32);
+
+}
 h1 {
     height: 100px;
     width: 100vw;
