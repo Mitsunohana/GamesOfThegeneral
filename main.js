@@ -210,48 +210,88 @@ var dama
 
 function movePiece(e, yourColor, enemyColor, targetSquare, attackerPiecePosition){
     var attackerPiece = draggedElement.getAttribute('rank')
-       
-        if(targetSquare-1 == attackerPiecePosition || targetSquare == attackerPiecePosition-1 || targetSquare+9 == attackerPiecePosition || targetSquare-9 == attackerPiecePosition){
-            e.target.append(draggedElement)
+    const moveException = {
+        0: "left",
+        9: "left",
+        18: "left",
+        27: "left",
+        36: "left",
+        45: "left",
+        54: "left",
+        63: "left",
+        8: "right",
+        17: "right",
+        26: "right",
+        35: "right",
+        44: "right",
+        53: "right",
+        62: "right",
+        71: "right"
+    }
 
-            if(attackerPiece=="flag" && yourColor=="white" && targetSquare<9){
-                lastMove=e.target
-                dama="white"
-            }else if(attackerPiece=="flag" && yourColor=="black" && targetSquare>62){
-                lastMove=e.target
-                dama="black"
+        if(moveException[attackerPiecePosition]=="left"){
+            if(targetSquare == attackerPiecePosition-1){
+                 alert("Piece can move 1 square up, down, and right only")
+            }else{
+                movePiece2(e, yourColor, enemyColor, targetSquare, attackerPiecePosition, attackerPiece)
             }
-
-
-            if(winner=="none"){
-                if(yourColor=="white"){
-                    coverWhite()
-                }else{
-                    coverBlack()
-                }
+        }else if(moveException[attackerPiecePosition]=="right"){
+            if(targetSquare == attackerPiecePosition+1){
+                 alert("Piece can move 1 square up, down, and right only")
+            }else{
+                movePiece2(e, yourColor, enemyColor, targetSquare, attackerPiecePosition, attackerPiece)
             }
-            
-        }else if(e.target.classList.contains(enemyColor)){
-           
-            var defenderPiece = e.target.parentNode.parentNode.firstChild.getAttribute('rank')
-            challenge(attackerPiece, defenderPiece, e)
-            if(winner=="none"){
-
-                if(yourColor=="white"){
-                    coverWhite()
-                }else{
-                    coverBlack()
-                }
-            }
-
-            
-        }else if(targetSquare == attackerPiecePosition){
-            //do nothing
-        }else if(e.target.classList.contains(yourColor)){
-            alert("Square already occupied by another piece of yours")
         }else{
-            alert("Piece can move 1 square up, down, and right only")
+            movePiece2(e, yourColor, enemyColor, targetSquare, attackerPiecePosition, attackerPiece)
         }
+
+
+}
+
+
+function movePiece2 (e, yourColor, enemyColor, targetSquare, attackerPiecePosition, attackerPiece){
+    
+    if(targetSquare-1 == attackerPiecePosition || targetSquare == attackerPiecePosition-1 || targetSquare+9 == attackerPiecePosition || targetSquare-9 == attackerPiecePosition){
+        e.target.append(draggedElement)
+
+        if(attackerPiece=="flag" && yourColor=="white" && targetSquare<9){
+            lastMove=e.target
+            dama="white"
+        }else if(attackerPiece=="flag" && yourColor=="black" && targetSquare>62){
+            lastMove=e.target
+            dama="black"
+        }
+
+
+        if(winner=="none"){
+            if(yourColor=="white"){
+                coverWhite()
+            }else{
+                coverBlack()
+            }
+        }
+        
+    }else if(e.target.classList.contains(enemyColor)){
+       
+        var defenderPiece = e.target.parentNode.parentNode.firstChild.getAttribute('rank')
+        challenge(attackerPiece, defenderPiece, e)
+        if(winner=="none"){
+
+            if(yourColor=="white"){
+                coverWhite()
+            }else{
+                coverBlack()
+            }
+        }
+
+        
+    }else if(targetSquare == attackerPiecePosition){
+        //do nothing
+    }else if(e.target.classList.contains(yourColor)){
+        alert("Square already occupied by another piece of yours")
+    }else{
+        alert("Piece can move 1 square up, down, and right only")
+    }
 }
 
 function game(e) {
