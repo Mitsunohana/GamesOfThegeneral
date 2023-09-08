@@ -361,9 +361,7 @@ function challenge(attacker, defender, e) {
             e.target.parentNode.remove()
             draggedElement.remove()
         }
-    }
-
-    if(attacker=="spy" && defender!="private"){
+    }else if(attacker=="spy" && defender!="private" && defender!="flag"){
         e.target.parentNode.parentNode.append(draggedElement)
         e.target.parentNode.parentNode.firstChild.remove()
         e.target.parentNode.remove()
