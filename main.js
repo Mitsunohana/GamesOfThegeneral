@@ -189,7 +189,7 @@ function appendToDiv(e, color,  checkFunc){
     }else if(checkFunc){
         e.target.append(draggedElement)
     }else{
-        alert("cannot placed there")
+        alert("You can only place your pieces on the first 3 rows starting from your back rank")
     }
 }
 
